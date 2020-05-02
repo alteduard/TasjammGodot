@@ -34,7 +34,7 @@ zoom = Vector2( 2, 2 )
 script = ExtResource( 3 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -116.022, -94.0927 )
+position = Vector2( -239.258, -38.0343 )
 scale = Vector2( 0.2, 0.2 )
 player1 = false
 move_speed = 75
