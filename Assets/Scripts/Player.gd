@@ -32,7 +32,8 @@ func _process(delta):
 
 func Fall():
 	if(position.y > 313.076):
-		position = spawnpoint
+		get_tree().reload_current_scene()
+		#position = spawnpoint
 
 
 func Movement(delta):

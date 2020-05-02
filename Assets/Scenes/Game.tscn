@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Tileset/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Scripts/MapController.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/arrows.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/wasd.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
 __meta__ = {
@@ -20,7 +22,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -29.164, -82.3131 )
+position = Vector2( -31.9573, -78.1231 )
 scale = Vector2( 0.2, 0.2 )
 move_speed = 75
 jump_force = 120
@@ -38,3 +40,28 @@ player1 = false
 move_speed = 75
 jump_force = 120
 gravity = 200
+
+[node name="Node" type="Node" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node"]
+margin_left = -175.0
+margin_top = -161.0
+margin_right = -23.0
+margin_bottom = -139.0
+rect_rotation = 8.82787
+text = "Catch the other player!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wasd" type="Sprite" parent="Node"]
+position = Vector2( -30.1681, -106.037 )
+rotation = 0.21515
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
+
+[node name="arrows" type="Sprite" parent="Node"]
+position = Vector2( -123.047, -117.908 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
