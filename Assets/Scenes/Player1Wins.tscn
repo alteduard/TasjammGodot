@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Scripts/ChangeScene.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 100.323
+margin_top = 26.7085
+margin_right = 258.323
+margin_bottom = 64.7085
+text = "Player 2 Wins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 75.8251
+margin_top = 82.8139
+margin_right = 235.825
+margin_bottom = 114.814
+text = "Back To Main Menu"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Scene = "res://Assets/Scenes/MainMenu.tscn"

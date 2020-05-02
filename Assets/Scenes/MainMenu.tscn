@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/PlayGame.jpeg" type="Texture" id=1]
+[ext_resource path="res://Assets/Scripts/ChangeScene.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -4.0
+margin_top = -8.0
+margin_right = 348.0
+margin_bottom = 188.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = -0.00337725
+anchor_top = -0.003002
+anchor_right = -0.00337725
+anchor_bottom = -0.003002
+margin_left = 30.0247
+margin_top = 11.2422
+margin_right = 302.025
+margin_bottom = 172.242
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Player 1 starts with a headstart. Player 2 needs to come close to player 1 to win. Player 1 needs to reach the end to win."
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+anchor_left = -0.00337725
+anchor_top = -0.003002
+anchor_right = -0.00337725
+anchor_bottom = -0.003002
+margin_left = 31.1054
+margin_top = 66.3588
+margin_right = 303.105
+margin_bottom = 227.359
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Player 1 moves with WASD. Player 2 moves with arrow keys"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 73.7892
+margin_top = 108.652
+margin_right = 248.789
+margin_bottom = 182.652
+texture_normal = ExtResource( 1 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
