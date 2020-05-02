@@ -11,7 +11,6 @@ var scenes = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var files = list_files_in_directory("res://Assets/MapSections/")
-	print(files.size())
 	for f in files:
 		var file = load(f)
 		scenes.push_back(file)	

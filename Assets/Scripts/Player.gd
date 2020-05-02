@@ -56,3 +56,14 @@ func Movement(delta):
 		snap = false
 		pass
 	pass
+
+
+
+
+func _on_Area2D_body_entered(body):
+	if(body.get_name() == "Player"):
+		print("collided with PLaayer 1")
+		get_tree().change_scene("res://Assets/Scenes/Player2Wins.tscn")
+		pass
+	print(body)
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
 
 export var Scene := "res://Assets/Scenes/Game.tscn"
 
@@ -9,3 +9,4 @@ export var Scene := "res://Assets/Scenes/Game.tscn"
 
 func _pressed():
 	get_tree().change_scene(Scene)
+

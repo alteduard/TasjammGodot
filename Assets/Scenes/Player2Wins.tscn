@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Scripts/ChangeScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Player2Wins.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Scripts/ButtonChangeScene.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -10,24 +11,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 85.7333
-margin_top = 58.0493
-margin_right = 243.733
-margin_bottom = 96.0493
-text = "Player 1 Wins"
+[node name="Button" type="Button" parent="."]
+margin_left = 102.0
+margin_top = 83.0
+margin_right = 214.0
+margin_bottom = 135.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 86.6951
-margin_top = 86.6278
-margin_right = 221.695
-margin_bottom = 123.628
-text = "Back To Main Menu"
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-Scene = "res://Assets/Scenes/MainMenu.tscn"
+[node name="Player2Wins" type="Sprite" parent="."]
+position = Vector2( 164.791, 87.3524 )
+scale = Vector2( 0.148572, 0.128868 )
+texture = ExtResource( 1 )

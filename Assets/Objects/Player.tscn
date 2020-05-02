@@ -7,6 +7,7 @@
 extents = Vector2( 31.9188, 31.8119 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( -2.10529, -5.26318 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
