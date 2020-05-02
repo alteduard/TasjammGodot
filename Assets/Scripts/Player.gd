@@ -6,8 +6,9 @@ export var move_speed := 250
 export var jump_force := 540
 export var gravity := 900
 export var slope_slide_threshold: = 50.0
-export var spawnpoint = Vector2(20,60)
 export var yValueToDie = 313.076
+
+var spawnpoint
 
 var velocity := Vector2()
 var right := "right1"
@@ -15,6 +16,7 @@ var left := "left1"
 var jump := "jump1"
 
 func _ready():
+	spawnpoint = position
 	if(!player1):
 		right = "right2"
 		left = "left2"
