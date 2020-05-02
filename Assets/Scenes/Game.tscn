@@ -219,6 +219,9 @@ move_speed = 75
 jump_force = 100
 gravity = 200
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 20, 120.122 )
 scale = Vector2( 0.2, 0.2 )
