@@ -10,18 +10,20 @@ export var yValueToDie = 313.076
 export var snapLength = 8
 var spawnpoint
 
-var doublejumped = false
+var canDoubleJump = false
 
 var velocity := Vector2()
 var right := "right1"
 var left := "left1"
 var jump := "jump1"
+var down := "down1"
 
 func _ready():
 	spawnpoint = position
 	if(!player1):
 		right = "right2"
 		left = "left2"
+		down = "down2"
 		jump = "jump2"
 		pass
 func _process(delta):
@@ -41,14 +43,29 @@ func Fall():
 			get_tree().change_scene("res://Assets/Scenes/Player1Wins.tscn")
 		#position = spawnpoint
 
+func smash():
+	#I tried something, but failed :(
+	pass
+	
+	
+
 
 func Movement(delta):
 	var direction_x = Input.get_action_strength(right) - Input.get_action_strength(left)
 	velocity.x = direction_x * move_speed
 	
-	if Input.is_action_just_pressed(jump) and snap:
-		velocity.y = -jump_force
-		snap = false
+	if Input.is_action_just_pressed(down) and player1:
+		smash()
+	
+	if Input.is_action_just_pressed(jump):
+		if snap:
+			velocity.y = -jump_force
+			snap = false
+			canDoubleJump = true
+		elif canDoubleJump:
+			velocity.y = -jump_force
+			snap = false
+			canDoubleJump = false
 		
 	velocity.y += gravity*delta
 	var snap_vector = Vector2(0,snapLength) if snap else Vector2()
@@ -69,6 +86,7 @@ func Movement(delta):
 func _on_Area2D_body_entered(body):
 	if(body.get_name() == "Player"):
 		print("collided with PLaayer 1")
+		get_tree().reload_current_scene()
 		get_tree().change_scene("res://Assets/Scenes/Player2Wins.tscn")
 		pass
 	print(body)

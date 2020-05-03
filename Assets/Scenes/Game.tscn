@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Tileset/NewTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Objects/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Scripts/CameraController.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Sprites/thing.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Sprites/missing.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/clouds.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 221.982, 1282.56 )
@@ -60,10 +61,10 @@ shape = SubResource( 1 )
 [node name="Node" type="Node" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node"]
-margin_left = -208.139
-margin_top = -170.261
-margin_right = -19.1393
-margin_bottom = -148.261
+margin_left = -212.652
+margin_top = -289.391
+margin_right = -23.6518
+margin_bottom = -267.391
 rect_rotation = 8.82787
 text = "missing texture must
 chase ghost!"
@@ -73,18 +74,18 @@ __meta__ = {
 }
 
 [node name="wasd" type="Sprite" parent="Node"]
-position = Vector2( -157.674, -111.995 )
+position = Vector2( -84.5714, -224.808 )
 rotation = 0.21515
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )
 
 [node name="arrows" type="Sprite" parent="Node"]
-position = Vector2( -123.047, -117.908 )
+position = Vector2( -219.615, -243.356 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
 [node name="CameraController" type="Node2D" parent="."]
-position = Vector2( 4, 0 )
+position = Vector2( 4.39722, 0 )
 script = ExtResource( 7 )
 player1 = NodePath("../Player")
 player2 = NodePath("../Player2")
@@ -98,4 +99,10 @@ position = Vector2( -105.601, -135.806 )
 scale = Vector2( 0.2, 0.2 )
 current = true
 zoom = Vector2( 2, 2 )
+
+[node name="clouds" type="Sprite" parent="CameraController"]
+position = Vector2( -86.731, -156.108 )
+scale = Vector2( 0.6, 0.6 )
+z_index = -8
+texture = ExtResource( 10 )
 [connection signal="body_entered" from="Player2/Area2D" to="Player" method="_on_Area2D_body_entered"]

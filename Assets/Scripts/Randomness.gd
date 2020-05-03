@@ -1,12 +1,9 @@
-extends Node2D
+extends Node
 
 
 export(int) var prob = 2
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 func _ready():
+	randomize()
 	if randi() % prob > 1:
-		global_position.y = 1000
+		get_parent().remove_child(self)

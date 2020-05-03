@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Scripts/ButtonChangeScene.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Player1Wins.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/scribble.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/thing.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/toad.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Scripts/Randomness.gd" type="Script" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -42,3 +43,5 @@ texture = ExtResource( 4 )
 [node name="toad" type="Sprite" parent="."]
 position = Vector2( 311, 157 )
 texture = ExtResource( 5 )
+script = ExtResource( 6 )
+prob = 10
