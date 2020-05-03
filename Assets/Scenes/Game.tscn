@@ -22,7 +22,7 @@ player1 = NodePath("../Player")
 player2 = NodePath("../Player2")
 
 [node name="Camera2D" type="Camera2D" parent="CameraController"]
-position = Vector2( -47.216, -155.08 )
+position = Vector2( -46.5526, -155.743 )
 scale = Vector2( 0.2, 0.2 )
 current = true
 zoom = Vector2( 2, 2 )
