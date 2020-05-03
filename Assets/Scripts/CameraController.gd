@@ -12,7 +12,11 @@ export(NodePath) var player2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+
 	var p1 = get_node(player1)
 	var p2 = get_node(player2)
+
+	if abs(p1.global_position.x - p2.global_position.x) > 700:
+		get_tree().change_scene("res://Assets/Scenes/Player1Wins.tscn")		
 
 	global_position.x = p1.global_position.x + 100 + (p2.global_position.x - p1.global_position.x) * 0.5

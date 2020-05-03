@@ -10,6 +10,8 @@ export var yValueToDie = 313.076
 export var snapLength = 8
 var spawnpoint
 
+var doublejumped = false
+
 var velocity := Vector2()
 var right := "right1"
 var left := "left1"

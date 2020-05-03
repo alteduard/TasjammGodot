@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Sprites/toad.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Tileset/NewTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/Scripts/Randomness.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mapsection" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="toad" type="Sprite" parent="mapsection"]
+position = Vector2( 117.711, -73.8658 )
+z_index = -2
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+prob = 1000
+
+[node name="toad2" type="Sprite" parent="mapsection"]
+position = Vector2( 43.9255, -41.4529 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -2
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+prob = 1000
+
+[node name="toad3" type="Sprite" parent="mapsection"]
+position = Vector2( 139.056, -41.7033 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -2
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+prob = 1000

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Scripts/Randomness.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tileset/NewTileSet.tres" type="TileSet" id=2]
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mapsection" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( -786422, 2, 0, -720887, 2, 0, -720886, 1, 0, -655352, 2, 0, -655351, 1, 0, -655350, 1, 0, -589817, 2, 0, -589816, 1, 0, -589815, 1, 0, -524282, 2, 0, -524281, 1, 0, -524280, 1, 0, -458747, 2, 0, -458746, 1, 0, -458745, 1, 0, -393212, 2, 0, -393211, 1, 0, -393210, 1, 0, -327677, 2, 0, -327676, 1, 0, -327675, 1, 0, -262142, 2, 0, -262141, 1, 0, -262140, 1, 0, -196607, 2, 0, -196606, 1, 0, -196605, 1, 0, -131072, 2, 0, -131071, 1, 0, -131070, 1, 0, -65536, 1, 0, -65535, 1, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mapsection"]
+margin_left = 52.0
+margin_top = -177.0
+margin_right = 141.0
+margin_bottom = -137.0
+rect_rotation = -24.9937
+text = "wow! slopes!"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+prob = 100
