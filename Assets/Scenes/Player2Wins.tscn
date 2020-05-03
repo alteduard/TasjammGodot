@@ -28,6 +28,6 @@ scale = Vector2( 0.148572, 0.128868 )
 texture = ExtResource( 1 )
 
 [node name="toad" type="Sprite" parent="."]
-position = Vector2( 232, 135 )
+position = Vector2( 234, 131 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
