@@ -31,10 +31,10 @@ func _process(delta):
 
 
 func Fall():
-	if(position.y > 313.076 and player1):
-		get_tree().change_scene("res://Assets/Scenes/Player2Wins.tscn")
-	if(position.y > 313.076 and !player1):
-		get_tree().change_scene("res://Assets/Scenes/Player1Wins.tscn")
+	if(position.y > 313.076):
+		get_tree().reload_current_scene()
+		#position = spawnpoint
+
 
 func Movement(delta):
 	var direction_x = Input.get_action_strength(right) - Input.get_action_strength(left)
