@@ -25,6 +25,7 @@ func _ready():
 func _process(delta):
 	Movement(delta)
 	Fall()
+		
 
 
 
@@ -32,7 +33,10 @@ func _process(delta):
 
 func Fall():
 	if(position.y > 313.076):
-		get_tree().reload_current_scene()
+		if player1:
+			get_tree().change_scene("res://Assets/Scenes/Player2Wins.tscn")
+		else:
+			get_tree().change_scene("res://Assets/Scenes/Player1Wins.tscn")
 		#position = spawnpoint
 
 

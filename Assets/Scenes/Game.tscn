@@ -29,7 +29,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -36.6013, -74.806 )
+position = Vector2( -35.4096, -74.4088 )
 scale = Vector2( 0.2, 0.2 )
 move_speed = 75
 jump_force = 120
@@ -60,19 +60,20 @@ shape = SubResource( 1 )
 [node name="Node" type="Node" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node"]
-margin_left = -175.0
-margin_top = -161.0
-margin_right = -23.0
-margin_bottom = -139.0
+margin_left = -208.139
+margin_top = -170.261
+margin_right = -19.1393
+margin_bottom = -148.261
 rect_rotation = 8.82787
-text = "Catch the other player!"
+text = "missing texture must
+chase ghost!"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="wasd" type="Sprite" parent="Node"]
-position = Vector2( -30.1681, -106.037 )
+position = Vector2( -157.674, -111.995 )
 rotation = 0.21515
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )
