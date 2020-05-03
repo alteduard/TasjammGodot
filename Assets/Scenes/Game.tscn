@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Tileset/NewTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Objects/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Assets/Scripts/arrows.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/wasd.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Objects/Player2Wins.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Scripts/CameraController.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Sprites/thing.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/missing.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 221.982, 1282.56 )
@@ -32,10 +35,8 @@ move_speed = 75
 jump_force = 120
 gravity = 200
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 2, 2 )
-script = ExtResource( 3 )
+[node name="Sprite2" type="Sprite" parent="Player"]
+texture = ExtResource( 8 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( -239.258, -38.0343 )
@@ -44,6 +45,10 @@ player1 = false
 move_speed = 75
 jump_force = 120
 gravity = 200
+
+[node name="Sprite3" type="Sprite" parent="Player2"]
+scale = Vector2( 3, 2 )
+texture = ExtResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="Player2"]
 script = ExtResource( 6 )
@@ -75,4 +80,20 @@ texture = ExtResource( 5 )
 position = Vector2( -123.047, -117.908 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
+
+[node name="CameraController" type="Node2D" parent="."]
+position = Vector2( 4, 0 )
+script = ExtResource( 7 )
+player1 = NodePath("../Player")
+player2 = NodePath("../Player2")
+
+[node name="MapController" type="Node2D" parent="CameraController"]
+position = Vector2( -4, 0 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="CameraController"]
+position = Vector2( -105.601, -135.806 )
+scale = Vector2( 0.2, 0.2 )
+current = true
+zoom = Vector2( 2, 2 )
 [connection signal="body_entered" from="Player2/Area2D" to="Player" method="_on_Area2D_body_entered"]
